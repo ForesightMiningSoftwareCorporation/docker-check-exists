@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ForesightMiningSoftwareCorporation/azure-blob-storage-check-exists@main
+      - uses: ForesightMiningSoftwareCorporation/azure-blob-storage-check-exists@v1
         with:
           container_name: www
           connection_string: ${{ secrets.ConnectionString }}
