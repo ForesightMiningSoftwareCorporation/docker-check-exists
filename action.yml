@@ -1,0 +1,29 @@
+name: "Azure Blob Storage Check Blob Exists"
+author: "Loïs Postula <lois@postu.la>"
+description: "Check if a blob exists in Azure Blob Storagee"
+branding:
+  icon: "box"
+  color: "green"
+inputs:
+  connection_string:
+    description: "The connection string for the storage account. Used if value is set. Either connection_string or sas_token must be supplied"
+    required: false
+  sas_token:
+    description: "The shared access signature token for the storage account. Either connection_string or sas_token must be supplied"
+    required: false
+  account_name:
+    description: "The name of the storage account. Required if sas_token is used"
+    required: false
+  container_name:
+    description: "The name of the storage account container these assets will be uploaded to"
+    required: true
+  blob_name:
+    description: "The name of the blob to check"
+    required: true
+runs:
+  using: "node16"
+  image: "dist/index.js"
+
+outputs:
+  exists:
+    description: "True if the blob exists"
