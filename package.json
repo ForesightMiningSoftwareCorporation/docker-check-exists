@@ -1,39 +1,37 @@
 {
-  "name": "azure-blob-storage-check-exists",
+  "name": "docker-check-exists",
   "version": "1.0.0",
-  "description": "Github Action to check if a blob exists in Azure Blob Storage",
-  "main": "lib/main.js",
+  "description": "Github Action to check if a docker image exists in a Docker Registry",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write '**/*.ts'",
     "format-check": "prettier --check '**/*.ts'",
     "lint": "eslint src/**/*.ts",
     "package": "ncc build --source-map --license licenses.txt",
-    "test": "jest",
-    "all": "npm run build && npm run format && npm run lint && npm run package && npm run test"
+    "all": "npm run build && npm run format && npm run lint && npm run package"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ForesightMiningSoftwareCorporation/azure-blob-storage-check-exists.git"
+    "url": "https://github.com/ForesightMiningSoftwareCorporation/docker-check-exists.git"
   },
   "keywords": [],
   "author": "Loïs Postula <lois@postu.la>",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.6.0",
-    "@azure/storage-blob": "^12.11.0"
+    "got": "^12.3.1"
   },
   "devDependencies": {
+    "@types/got": "^9.6.12",
     "@types/node": "^18.6.3",
     "@typescript-eslint/parser": "^5.8.1",
     "@vercel/ncc": "^0.34.0",
     "eslint": "^8.21.0",
     "eslint-plugin-github": "^4.3.2",
     "eslint-plugin-jest": "^26.7.0",
-    "jest": "^28.1.3",
     "js-yaml": "^4.1.0",
     "prettier": "2.7.1",
-    "ts-jest": "^28.0.7",
     "typescript": "^4.4.4"
   }
 }
