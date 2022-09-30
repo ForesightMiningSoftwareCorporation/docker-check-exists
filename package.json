@@ -19,7 +19,7 @@
   "author": "Loïs Postula <lois@postu.la>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.6.0",
+    "@actions/core": "^1.10.0",
     "got": "^12.3.1"
   },
   "devDependencies": {
